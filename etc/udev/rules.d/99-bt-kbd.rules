@@ -1,5 +1,5 @@
 ACTION!="add|change", GOTO="bt-kbd_end"
 
-SUBSYSTEM=="input", ATTRS{phys}=="00:1b:10:00:2a:ec", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/mag/.Xauthority", RUN+="/bin/sh -c 'echo /home/mag/bin/bt-kbd.sh | at now'"
+SUBSYSTEM=="input", ATTRS{name}=="ThinkPad Compact Bluetooth Keyboard with TrackPoint", TAG+="systemd", ENV{SYSTEMD_WANTS}="bt-kbd.service"
 
 LABEL="bt-kbd_end"

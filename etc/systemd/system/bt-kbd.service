@@ -1,0 +1,5 @@
+[Service]
+Type=oneshot
+User=mag
+WorkingDirectory=/home/mag
+ExecStart=/home/mag/bin/bt-kbd.sh
